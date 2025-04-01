@@ -1,0 +1,172 @@
+$nav-panel-height: 150px;
+$block-padding: 55px;
+@mixin empty-block() {
+    height: 100vh;
+    padding: 50px 0;
+}
+
+body {
+    & #root {
+        & .page {
+            width: 100%;
+            & h1 {
+                font-size: 3em;
+            }
+            & h2 {
+                font-size: 2.1em;
+            }
+            & span {
+                font-size: 1.25em;
+            }
+            & button {
+                font-size: 1em;
+            }
+            & .main-header {
+                overflow: hidden;
+                height: 150px;
+                & .logo {
+                    height: 100px;
+                    & h1 {
+                        font-size: 25px;
+                    }
+                }
+                & h2 {
+                    display: none;
+                }
+                & .contacts a {
+                    font-size: 30px;
+                }
+            }
+            & .nav-panel {
+                width: 100%;
+                border-width: 2px;
+                & .nav-content {
+                    display: flex;
+                    justify-content: space-around;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    & button {
+                        width: 24%;
+                        height: 75px;
+                    }
+                }
+            }
+            & .block {
+                width: 100%;
+                padding: $block-padding 0;
+                .header {
+                   padding-bottom: $block-padding; 
+                }
+                .content {
+                    width: 100%;
+                }
+            }
+  
+            & .main-block {
+                gap: 20px;
+                box-sizing: border-box;
+                flex-direction: column;
+                position: relative;
+                padding: 0px;
+                min-height: calc(100vh - $nav-panel-height);
+                & .text-side {
+                    box-sizing: border-box;
+                    padding: 10px;
+                    width: 100%;
+                    height: calc(100vh - $nav-panel-height);
+                    gap: 20px;
+                    & button {
+                        width: 100px;
+                        height: 50px;
+                    }
+                }
+                & .video-side {
+                    min-height: calc(100vh - $nav-panel-height);
+                    position: absolute;
+                    & .video {
+                        content: none
+                        //background: url("./../img/mobile-background.jpg") !important;
+                    }
+                }
+            }
+            & .school-block {
+                & .content {
+                    & .images:nth-last-of-type(1){
+                        & img:nth-child(2) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            & .instructors-block {
+                & .content {
+                    flex-direction: column;
+                    align-items: center;
+                    & .master {
+                        align-items: start;
+                        width: 95%;
+                        gap: 10px;
+                        height: 350px;
+                        & .portrait {
+                            height: 255px;
+                        }
+                        & .text-content {
+                            & span {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            & .master-block {
+                max-height: 7000px;
+                & .content {
+                    position: relative;
+                    & .text-content {
+                        width: 100%;
+                        & span {
+                            padding: 0 15px;
+                        }
+                        & a {
+                            padding-right: 50px;
+                            font-size: 25px;
+                        }
+                        & .quote {
+                            & span {
+                                font-size: 2em;
+                            }
+                            & .author {
+                                top: 120px;
+                                right: 0;
+                            }
+                        }
+                    }
+                    & .grandmaster-image {
+                        filter: brightness(0.35);
+                        position: absolute;
+                    }
+                }
+            }
+
+            & .order-block {
+                & .top-section {
+                    flex-direction: column;
+                    align-items: center;
+                    & .form, .map {
+                        width: 95% !important;
+                    }
+                }
+                
+                & .faq {
+                    width: 100%;
+                }
+            }
+
+            .bottom {
+                height: 150px;
+                padding: 25px;
+            }
+        }
+    }
+}
