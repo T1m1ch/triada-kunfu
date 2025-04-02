@@ -83,7 +83,11 @@ $page-size: 1366px;
         }
     }
     & .school-block {
-
+        & .top-section {
+            & .text-side {
+                width: 800px;
+            }
+        }
     }
     & .education-block {
 
@@ -116,6 +120,9 @@ $page-size: 1366px;
         & .top-section {
             & .form, .map {
                 width: 500px;
+            }
+            & .map-link {
+                display: none;
             }
         }
         & .faq {
