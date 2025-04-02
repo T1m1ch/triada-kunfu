@@ -45,6 +45,14 @@ $page-size: 1366px;
                 font-size: 1.4em;
                 height: 70px;
             }
+            & .top {
+                & .switcher {
+                    display: none;
+                }
+            }
+            & .buttons-list {
+                gap: 20px;
+            }
         }
     }
     & .block {
