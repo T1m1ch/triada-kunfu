@@ -1,3 +1,399 @@
+$block-padding: 55px;
+@mixin empty-block() {
+    height: 100vh;
+    padding: 50px 0;
+}
+
 body {
-    background-color: tan !important;
+    & #root {
+        & .page {
+            width: 100%;
+            & h1 {
+                font-size: 3em;
+            }
+            & h2 {
+                font-size: 2.1em;
+            }
+            & span {
+                font-size: 2em;
+            }
+            & button {
+                font-size: 1.25em;
+            }
+            & .main-header {
+                display: none;
+                overflow: hidden;
+                height: 150px;
+                & .logo {
+                    height: 100px;
+                    & h1 {
+                        font-size: 25px;
+                    }
+                }
+                & h2 {
+                    display: none;
+                }
+                & .contacts a {
+                    font-size: 30px;
+                }
+            }
+            & .nav-panel {
+                width: 100% !important;
+                border-width: 2px;
+                height: 75px;
+                box-sizing: border-box;
+                overflow-y: hidden;
+                transition: 0.25s;
+                & .nav-content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: start;
+                    width: 100%;
+                    padding: 0 15px;
+                    position: relative;
+                    & button {
+                        width: 24%;
+                        height: 75px;
+                    }
+                    & .logo {
+                        width: 75px;
+                        height: 75px;
+                    }
+                    & .top {
+                        display: flex;
+                        width: 100% !important;
+                        padding: 0 !important;
+                        justify-content: start !important;
+                        & .switcher {
+                            display: none;
+                        }
+                    }
+                    & .buttons-list {
+                        top: 12px;
+                        left: 105px;
+                        position: absolute;
+                        width: 80%;
+                        gap: 15px;
+                        & button {
+                            width: unset;
+                            height: 50px;
+                        }
+                    }
+                }
+            }
+            & .block {
+                width: 100%;
+                padding: $block-padding 0;
+                .header {
+                    font-size: 2.5em;
+                    padding-bottom: $block-padding; 
+                }
+                .content {
+                    width: 100%;
+                    & .quote {
+                        display: flex;
+                        padding: 0 10px;
+                        position: relative;
+                        flex-direction: column;
+                        & span {
+                            font-size: 30px;
+                            font-family: "Marck Script", cursive;
+                        }
+                        & .author {
+                            position: absolute;
+                            bottom: 0px;
+                            align-self: end;
+                        }
+                    }
+                }
+            }
+  
+            & .main-block {
+                background-size: cover !important;
+                gap: 20px;
+                box-sizing: border-box;
+                flex-direction: column;
+                position: relative;
+                padding: 0px;
+                height: calc(100vh - 75px);
+                & .text-side {
+                    box-sizing: border-box;
+                    padding: 10px;
+                    width: 100%;
+                    gap: 40px;
+                    height: calc(100vh - 75px);
+                    & h2 {
+                        font-size: 32px !important;
+                    }
+                    & button {
+                        display: flex;
+                        text-decoration: none;
+                        font-family: "Manrope", sans-serif;
+                        justify-content: center;
+                        text-wrap-mode: nowrap;
+                        align-items: center;
+                        background-color: rgb(252, 63, 29);
+                        color: white;
+                        height: 70px;
+                        width: 180px;
+                        border-radius: 5px;
+                    }
+                }
+                & .video-side {
+                    position: absolute;
+                    & .video {
+                        min-height: calc(100vh - 75px);
+                        src: none !important;
+                    }
+                }
+            }
+            & .school-block {
+                & .content {
+                    align-items: center;
+                    & span {
+                        width: 95%;
+                    }
+                    & .quote {
+                        width: 340px;
+                        height: 150px;
+                        & .author {
+                            left: 220px;
+                            top: unset;
+                            bottom: -25px;
+                        }
+                    }
+                    & .images:nth-last-of-type(1){
+                        height: unset;
+                        width: 95%;
+                        & div {
+                            height: unset;
+                            width: 100%;
+                            & img {
+                                height: unset;
+                                width: 100%;
+                            }
+                        }
+                        & div:nth-child(2) {
+                            display: none;
+                        }
+                    }
+                    .top-section {
+                        flex-direction: column-reverse;
+                        width: 95%;
+                        align-items: center;
+                        & .text-side {
+                            width: 100%;
+                        }
+                        & .images {
+                            width: 100%;
+                            height: unset;
+                            & div {
+                                height: unset;
+                                & img {
+                                    height: unset;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            & .education-block {
+                & .content {
+                    min-width: 768px;
+                    max-width: 85%;
+                    & .columns {
+                        align-items: center;
+                        flex-direction: column-reverse;
+                        gap: 40px;
+                        & .left-side {
+                            & .quote {
+                                display: none;
+                            }
+                            width: 95%;
+                            gap: 40px;
+                            & .images {
+                                display: none;
+                            }
+                        }
+                        & .right-side {
+                            justify-content: center;
+                            align-items: center;
+                            width: 95%;
+                            padding: 0;
+                            gap: 10px;
+                            & img {
+                                width: 100%;
+                                border-radius: 5px;
+                            }
+                            & img:nth-child(3) {
+                                display: none;
+                            }
+                        }
+                    }
+                    & .slider {
+                        width: 769px;
+                        & .controls {
+                            & button {
+                                height: 50px;
+                                width: 30px;
+                            }
+                        }
+                        & .image-view {
+                            width: 700px;
+                            height: 450px;
+                            & img {
+                                width: 700px;
+                                height: 450px;
+                            }
+                        }
+                    }
+                    
+                }
+
+            }
+
+            & .instructors-block {
+                & .content {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 40px !important;
+                    & .master {
+                        align-items: start;
+                        width: 85%;
+                        gap: 10px;
+                        padding: 0;
+                        & .portrait {
+                            height: 255px;
+                        }
+                        & .text-content {
+                            & span {
+                                font-size: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            & .master-block {
+                & .content {
+                    width: 95%;
+                    position: relative;
+                    & .text-content {
+                        width: 100%;
+                        & span {
+                            width: 95%;
+                            align-self: center;
+                        }
+                        & a {
+                            padding-right: 50px;
+                            font-size: 25px;
+                        }
+                        & .quote {
+                            width: 700px;
+                            height: 120px;
+                            & span {
+                                font-size: 2em;
+                            }
+                            & .author {
+                                bottom: 20px;
+                                left: 325px;
+                            }
+                        }
+                    }
+                    & .grandmaster-image {
+                        filter: brightness(0.35);
+                        position: absolute;
+                    }
+                }
+            }
+            & .contacts-block {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: white;
+                & .content {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 40px;
+                    width: 85%;
+                    & .contacts {
+                        display: flex;
+                        box-sizing: border-box;
+                        width: 100%;
+                        height: 75px;
+                        gap: 10px;
+                        justify-content: center;
+                        & .social {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 80px;
+                            height: 100%;
+                            border-radius: 7px;
+                            border: 1px solid black;
+                            & img {
+                                width: 70%;
+                                height: 70%;
+                                filter: invert(1);
+                            }
+                        }
+                        & .phone {
+                            background-color: rgb(255, 255, 255);
+                            & img {
+                                filter: none;
+                            }
+                        }
+                        & .vk {
+                            background-color: navy;
+                        }
+                        & .email {
+                            background-color: rgb(0, 0, 0);
+                        }
+                    }
+                    & .address {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        gap: 10px;
+                        align-items: center;
+                        & .map {
+                            width: 90%;
+                            height: 600px;
+                            & iframe {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            & .order-block {
+                background-position: 85%;
+                & .content {
+                    width: 85%;
+                    & .top-section {
+                        flex-direction: column;
+                        align-items: center;
+                        & .form {
+                            width: 100%;
+                            border-radius: 0 !important;
+                            border-width: 1px;
+                        }
+                    }
+                    
+                    & .faq {
+                        & button {
+                            font-size: 1.5em;
+                        }
+                        width: 100%;
+                    }
+                }
+            }
+
+            .bottom {
+                height: 150px;
+                padding: 25px;
+            }
+        }
+    }
 }

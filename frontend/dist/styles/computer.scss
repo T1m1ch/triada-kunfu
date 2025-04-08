@@ -40,6 +40,9 @@ $page-size: 1366px;
         & .nav-content {
             gap: 20px;
             width: $page-size;
+            & hr {
+                display: none;
+            }
             & button {
                 font-weight: 100;
                 font-size: 1.4em;
@@ -67,16 +70,18 @@ $page-size: 1366px;
         width: 100vw !important;
         gap: 20px;
         & .text-side, .video-side {
+            display: flex;
             box-sizing: border-box;
         }
         & .text-side {
-            box-sizing: border-box;
+            border: 1px solid black;
             padding: 0 7px;
             & h2 {
+                text-align: center;
                 font-size: 34px;
             }
-
-            width: 525px;
+            background-color: rgba(255, 255, 255, 0.806) !important;
+            width: 550px;
             height: 466px;
             gap: 20px;
             & button {
@@ -98,10 +103,30 @@ $page-size: 1366px;
         }
     }
     & .education-block {
-
+        & .slider {
+            width: 800px;
+            height: 450px;
+            & .controls {
+                & button {
+                    scale: 1.20 1.4;
+                    & svg {
+        
+                    }
+                }
+            }
+            & .image-view {
+                width: 700px;
+                height: 450px;
+                & img {
+                    width: 700px;
+                    height: 450px;
+                }
+            }
+        }
     }
     & .instructors-block {
         & .content {
+            gap: 65px !important;
             & .master {
                 gap: 20px;
                 height: 225px;
@@ -119,6 +144,14 @@ $page-size: 1366px;
         height: 700px;
         & .content {
             & .text-content {
+                & .quote {
+                    & .author {
+                        right: unset;
+                        bottom: -10px;
+                        left: 350px;
+                    }
+                    height: 110px;
+                }
                 width: 866px;
             }
         }
@@ -127,14 +160,21 @@ $page-size: 1366px;
     & .order-block {
         & .top-section {
             & .form, .map {
-                width: 500px;
+                width: 550px;
+                height: 500px;
+                
             }
-            & .map-link {
-                display: none;
+            & .form {
+                padding: 1.5% 5% !important;
+            }
+            & .map {
+                & iframe {
+                    width: 550px;
+                }
             }
         }
         & .faq {
-            width: 1040px;
+            width: 1140px;
         }
     }
     .bottom {
