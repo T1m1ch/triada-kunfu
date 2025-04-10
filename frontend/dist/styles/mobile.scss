@@ -57,12 +57,10 @@ body {
                         display: flex;
                         width: 100%;
                         box-sizing: border-box;
-                        padding: 0 17px;
+                        //padding: 0 17px;
                         justify-content: space-between;
                         position: relative;
                         & button {
-                            position: absolute;
-                            left: 0 !important;
                             
                         }
                         & .switcher {
@@ -117,9 +115,10 @@ body {
                 flex-direction: column;
                 position: relative;
                 padding: 0px;
-                height: calc(100vh - 75px);
+                height: calc(100vh - 175px);
                 & .text-side {
                     box-sizing: border-box;
+                    opacity: 0.9;
                     padding: 10px;
                     width: 100%;
                     gap: 40px;
@@ -144,10 +143,9 @@ body {
                 }
                 & .video-side {
                     position: absolute;
+                    width: 100%;
                     & .video {
-                        min-height: calc(100vh - 75px);
-                        content: none
-                        //background: url("./../img/mobile-background.jpg") !important;
+                        width: 100%;
                     }
                 }
             }
@@ -167,17 +165,18 @@ body {
                         }
                     }
                     & .images:nth-last-of-type(1){
-                        height: unset;
                         width: 95%;
+                        background-color: rebeccapurple;
+                        height: 237px;
                         & div {
-                            height: unset;
-                            width: 100%;
+                            height: 237px;
+                            width: 360px;
                             & img {
-                                height: unset;
-                                width: 100%;
+                                height: 237px;
+                                width: 360px;
                             }
                         }
-                        & div:nth-child(2) {
+                        & div:nth-child(1) {
                             display: none;
                         }
                     }
@@ -241,11 +240,11 @@ body {
                             }
                         }
                         & .image-view {
-                            width: 360px;
-                            height: 230px;
+                            width: 360px !important;
+                            height: 240px;
                             & img {
-                                width: 360px;
-                                height: 230px;
+                                width: 360px !important;
+                                height: 240px;
                             }
                         }
                     }

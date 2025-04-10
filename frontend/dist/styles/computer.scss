@@ -28,8 +28,15 @@ $page-size: 1366px;
         & h2 {
             font-size: 55px;
         }
-        & .contacts a {
-            font-size: 30px;
+        & .contacts {
+            width: 375px;
+            align-items: end !important;
+            & span {
+                text-align: end !important;
+            }
+            & a {
+                font-size: 30px;
+            }
         }
     }
     & .nav-panel {
@@ -105,7 +112,7 @@ $page-size: 1366px;
     & .education-block {
         & .slider {
             width: 800px;
-            height: 450px;
+            height: 425px;
             & .controls {
                 & button {
                     scale: 1.20 1.4;
@@ -116,10 +123,10 @@ $page-size: 1366px;
             }
             & .image-view {
                 width: 700px;
-                height: 450px;
+                height: 445px;
                 & img {
                     width: 700px;
-                    height: 450px;
+                    height: 445px;
                 }
             }
         }
@@ -133,7 +140,7 @@ $page-size: 1366px;
                 width: 650px;
                 & .text-content {
                     & span {
-                        font-size: 24px;
+                        font-size: 22.5px;
                     }
                 }
             }
@@ -159,18 +166,20 @@ $page-size: 1366px;
 
     & .order-block {
         & .top-section {
+            width: 1140px !important;
+            align-self: center !important;
             & .form, .map {
                 width: 550px;
                 height: 500px;
-                
             }
             & .form {
                 padding: 1.5% 5% !important;
             }
             & .map {
                 & iframe {
-                    width: 550px;
+                    width: 600px;
                 }
+                margin-left: 20px;
             }
         }
         & .faq {

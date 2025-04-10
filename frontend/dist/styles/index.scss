@@ -214,6 +214,31 @@
                                     border-radius: 5px;
                                 }
                             }
+                            .slider {
+                                display: flex;
+                                position: relative;
+                                width: 622px;
+                            }
+                            
+                            .first, .second {
+                                position: absolute;
+                                transition: opacity 2.3s ease; /* Плавное изменение прозрачности */
+                                width: 100%;
+                            }
+                            
+                            /* Изначально первое изображение видно, второе скрыто */
+                            .first {
+                                z-index: 2; /* Оно будет на переднем плане */
+                            }
+                            
+                            .second {
+                                z-index: 1; /* Оно будет скрыто */
+                            }
+                            
+                            /* Класс для скрытия изображения */
+                            .hidded {
+                                opacity: 0;
+                            }        
                         }
                         & .top-section {
                             display: flex;
@@ -295,10 +320,11 @@
                         }
                         & .slider {
                             display: flex;
+                            flex-direction: column;
                             align-self: center;
                             z-index: 1;
                             position: relative;
-                            justify-content: center;
+                            align-items: center;
                             & .controls {
                                 display: flex;
                                 align-items: center;
@@ -310,12 +336,16 @@
                             }
                             & .image-view {
                                 display: flex;
-                                overflow: auto;
+                                overflow: hidden;
                                 border-radius: 8px;  
                                 align-items: center; 
                                 & img {
             
                                 }
+                            }
+                            & .description {
+                                height: 1.5em;
+                                color: white;
                             }
                         }
                     }
@@ -421,7 +451,6 @@
                         & .top-section {
                             display: flex;
                             justify-content: center;
-                            gap: 40px;
                             width: 100%;
                             & .map {
                                 display: flex;
