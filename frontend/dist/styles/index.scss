@@ -63,7 +63,7 @@
                 .main-header {
                     display: flex;
                     z-index: 5;
-                    justify-content: space-around;
+                    justify-content: space-between;
                     align-items: center;
                     background: url("./../img/block-2.webp");
                     width: 100%;
@@ -79,7 +79,13 @@
                     }
                       
                     & h2 {
+                        display: flex;
+                        position: absolute;
                         color: white;
+                        width: 100%;
+                        text-align: center;
+                        align-content: center;
+                        justify-content: center;
                         font-family: "Manrope", sans-serif;
                     }
                 
@@ -214,7 +220,7 @@
                                     border-radius: 5px;
                                 }
                             }
-                            .slider {
+                            .slider-1, .slider-2 {
                                 display: flex;
                                 position: relative;
                                 width: 622px;
