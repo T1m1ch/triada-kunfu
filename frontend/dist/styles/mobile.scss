@@ -115,7 +115,7 @@ body {
                 flex-direction: column;
                 position: relative;
                 padding: 0px;
-                height: calc(100vh - 175px);
+                height: calc(100vh - 75px);
                 & .text-side {
                     box-sizing: border-box;
                     opacity: 1;
@@ -235,8 +235,14 @@ body {
                         width: 100%;
                         & .controls {
                             & button {
-                                height: 50px;
-                                width: 30px;
+                                background-color: white;
+                                border-radius: 50%;
+                                width: 40px;
+                                height: 40px;
+                                border: none;
+                                &:hover {
+                                    background-color: rgb(237, 29, 38);
+                                }
                             }
                         }
                         & .image-view {
@@ -403,6 +409,7 @@ body {
                     align-items: center;
                     & .form {
                         width: 100%;
+                        height: 600px;
                         border-radius: 0 !important;
                         border-width: 1px;
                     }
@@ -423,9 +430,10 @@ body {
                     & .top-side, .bottom-side {
                         flex-wrap: wrap;
                         gap: 20px;
-                        height: 175px;
+                        height: 100px;
                     }
                     & .bottom-side {
+                        height: 175px;
                         border-top: 2px solid white;
                     }
                 }

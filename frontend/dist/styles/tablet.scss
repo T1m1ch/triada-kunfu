@@ -10,8 +10,10 @@ body {
         width: 1366px !important;
     }
 }
+$page-size: 1366px;
 
 .page {
+    width: $page-size;
     & h1 {
         font-size: 3.5em;
     }
@@ -26,7 +28,10 @@ body {
         padding-bottom: 80px;
     }
     & .main-header {
-        width: 100% !important;
+        box-sizing: border-box;
+        padding: 0 1.5%;
+        width: 1366px !important;
+        background-color: red;
         height: 175px;
         & .logo {
             height: 125px;
@@ -36,15 +41,27 @@ body {
         }
         & h2 {
             font-size: 55px;
+            margin-left: -20px;
         }
-        & .contacts a {
-            font-size: 30px;
+        & .contacts {
+            width: 375px;
+;           &a, span {
+                font-size: 21px;
+            }
+            align-items: end !important;
+            & span {
+                text-align: end !important;
+            }
+            & a {
+                margin-top: 15px;
+                font-size: 30px;
+            }
         }
     }
     & .nav-panel {
         display: flex;
         position: sticky;
-        width: 100%;
+        width: 1366px;
         height: 70px;
         & .nav-content {
             gap: 20px;
@@ -68,15 +85,15 @@ body {
         }
     }
     & .block {
-        padding: 80px 0;
-        width: 100% !important;
+        padding: 65px 0;
+        width: 100%;
         & .content {
             width: $page-size;
         }
     }
     & .main-block {
         background-color: rgb(228, 228, 228) !important;
-        width: 100% !important;
+        width: 1366px !important;
         gap: 20px;
         & .text-side, .video-side {
             display: flex;
@@ -88,6 +105,9 @@ body {
             & h2 {
                 text-align: center;
                 font-size: 34px;
+            }
+            & span {
+                text-align: center;
             }
             background-color: rgba(255, 255, 255, 0.806) !important;
             width: 550px;
@@ -114,21 +134,20 @@ body {
     & .education-block {
         & .slider {
             width: 800px;
-            height: 450px;
+            height: 425px;
             & .controls {
                 & button {
-                    scale: 1.20 1.4;
-                    & svg {
-        
-                    }
+                    background-color: white;
+                    height: 35px;
+                    width: 35px;
                 }
             }
             & .image-view {
                 width: 700px;
-                height: 450px;
+                height: 445px;
                 & img {
                     width: 700px;
-                    height: 450px;
+                    height: 445px;
                 }
             }
         }
@@ -138,11 +157,11 @@ body {
             gap: 65px !important;
             & .master {
                 gap: 20px;
-                height: 225px;
+                height: 255px;
                 width: 650px;
                 & .text-content {
                     & span {
-                        font-size: 24px;
+                        font-size: 22.5px;
                     }
                 }
             }
@@ -166,20 +185,137 @@ body {
         }
     }
 
+    & .contacts-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        & .content {
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            & .contacts {
+                display: flex;
+                box-sizing: border-box;
+                width: 100%;
+                height: 75px;
+                gap: 10px;
+                justify-content: center;
+                & .social {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 80px;
+                    height: 100%;
+                    border-radius: 7px;
+                    border: 1px solid black;
+                    z-index: 3;
+                    & img {
+                        width: 70%;
+                        height: 70%;
+                        filter: invert(1);
+                    }
+                }
+                & .phone {
+                    background-color: rgb(255, 255, 255);
+                    & img {
+                        filter: none;
+                    }
+                }
+                & .vk {
+                    background-color: navy;
+                }
+                & .email {
+                    background-color: rgb(0, 0, 0);
+                }
+            }
+            & .address {
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+                gap: 30px;
+                
+                & .info {
+                    display: flex;
+                    z-index: 1 !important;
+                    padding: 5px 10px;
+                    height: 530px;
+                    width: 650px;
+                    align-items: center;
+                    box-sizing: border-box;
+                    position: relative;
+                    flex-direction: column;
+                    border-radius: 10px;
+                    gap: 20px;
+                    & img {
+                        height: 325px;
+                        border-radius: 7px;
+                    
+                    }
+                    & a img {
+                        height: unset !important;
+                    }
+                }
+                & .map {
+                    box-sizing: border-box;
+                    width: 500px;
+                    height: 529px;
+                    margin-top: -1px;
+                    & iframe {
+                        border-radius: 10px;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                & .controls {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: absolute;
+                    width: 90%;
+                    height: 100% !important;
+                    z-index: 2 !important;
+                    & button {
+                        background-color: white;
+                        border-radius: 30%;
+                        width: 40px;
+                        height: 40px;
+                        &:hover {
+                            background-color: rgb(237, 29, 38);
+                        }
+                    }
+                }
+            }
+        }
+    }
     & .order-block {
         & .top-section {
-            & .form, .map {
-                width: 550px;
-                height: 500px;
-                
-            }
+            width: 1140px !important;
+            align-self: center !important;
             & .form {
-                padding: 1.5% 5% !important;
+                background-color: rgba(255, 255, 255, 0.1);
+                background-position: 10%;
+                width: 100%;
+                position: relative;
+                height: 700px !important;
+                padding: 0% 30% !important;
+                & iframe {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100% !important;
+                    border-radius: 10px;
+                    padding: 8% 10px;
+                    background-color: rgb(255, 255, 255, 0.98);
+                }
             }
+        
+            
             & .map {
                 & iframe {
-                    width: 550px;
+                    width: 600px;
                 }
+                margin-left: 20px;
             }
         }
         & .faq {
@@ -187,12 +323,18 @@ body {
         }
     }
     .bottom {
-        width: 100% !important;
+        width: 1366px !important;
         height: 200px;
         & .content {
-            padding: 40px;
             width: $page-size;
             height: 100%;
+            & .top-side, .bottom-side {
+                height: 100px;
+            }
+            & .bottom-side {
+                height: 175px;
+                border-top: 1px solid white;
+            }
         }
     }
 }
