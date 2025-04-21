@@ -338,7 +338,7 @@
                                 position: absolute;
                                 width: 100%;
                                 & button {
-                                    border-radius: 50%;
+                                    border-radius: 30%;
                                     &:hover {
                                         background-color: rgb(237, 29, 38);
                                         border: none;
@@ -375,7 +375,7 @@
                             display: flex;
                             gap: 20px;
                             flex-direction: row;
-                            align-items: center;
+                            align-items: start;
                         
                             & .portrait {
                                 display: flex;

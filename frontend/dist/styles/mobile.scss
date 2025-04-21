@@ -166,15 +166,10 @@ body {
                     }
                     & .images:nth-last-of-type(1){
                         width: 95%;
+                        height: unset;
                         background-color: rebeccapurple;
-                        height: 237px;
-                        & div {
-                            height: 237px;
-                            width: 360px;
-                            & img {
-                                height: 237px;
-                                width: 360px;
-                            }
+                        & video {
+                            width: 100%;
                         }
                         & div:nth-child(1) {
                             display: none;
@@ -234,16 +229,9 @@ body {
                     & .slider {
                         width: 100%;
                         & .controls {
-                            & button {
-                                background-color: white;
-                                border-radius: 50%;
-                                width: 40px;
-                                height: 40px;
-                                border: none;
-                                &:hover {
-                                    background-color: rgb(237, 29, 38);
-                                }
-                            }
+                            width: 100%;
+                            min-width: 360px;
+                            max-width: 425px;
                         }
                         & .image-view {
                             width: 360px !important;
@@ -296,14 +284,14 @@ body {
                         }
                         & .quote {
                             width: 340px;
-                            height: 120px;
+                            height: 140px;
                             & span {
                                 font-size: 2em;
                             }
                             & .author {
-                                top: 120px;
+                                top: 140px;
                                 bottom: 0;
-                                left: 200px;
+                                left: 260px;
                             }
                         }
                     }
@@ -362,18 +350,6 @@ body {
                         align-items: center;
                         width: 100%;
                         gap: 20px;
-                        & .controls {
-                            display: flex;
-                            position: absolute;
-                            width: 100%;
-                            height: 270px;
-                            align-items: center;
-                            justify-content: space-between;
-                            & button {
-                                height: 50px;
-                                width: 30px;
-                            }
-                        }
                         & .info {
                             display: flex;
                             width: 98%;
@@ -398,6 +374,21 @@ body {
                                 width: 100%;
                                 height: 100%;
                             }
+
+                        }
+                        & .controls {
+                            display: flex;
+                            position: absolute;
+                            width: 100%;
+                            height: 270px;
+                            align-items: center;
+                            justify-content: space-between;
+                            & button {
+                                border-radius: 30%;
+                                &:hover {
+                                    background-color: rgb(237, 29, 38);
+                                }
+                            }
                         }
                     }
                 }
@@ -405,8 +396,10 @@ body {
             & .order-block {
                 background-position: 80%;
                 & .top-section {
+                    width: 98% !important;
                     flex-direction: column;
                     align-items: center;
+                    align-self: center !important;
                     & .form {
                         width: 100%;
                         height: 600px;
@@ -419,7 +412,7 @@ body {
                 }
                 
                 & .faq {
-                    width: 100%;
+                    width: 98%;
                 }
             }
 

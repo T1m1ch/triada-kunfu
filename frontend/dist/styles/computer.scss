@@ -123,13 +123,6 @@ $page-size: 1366px;
         & .slider {
             width: 800px;
             height: 425px;
-            & .controls {
-                & button {
-                    background-color: white;
-                    height: 35px;
-                    width: 35px;
-                }
-            }
             & .image-view {
                 width: 700px;
                 height: 445px;
@@ -283,10 +276,10 @@ $page-size: 1366px;
             & .form {
                 background-color: rgba(255, 255, 255, 0.1);
                 background-position: 10%;
-                width: 100%;
+                width: 70%;
                 position: relative;
                 height: 700px !important;
-                padding: 0% 30% !important;
+                padding: 0% 20% !important;
                 & iframe {
                     display: flex;
                     align-items: center;
@@ -307,7 +300,7 @@ $page-size: 1366px;
             }
         }
         & .faq {
-            width: 1140px;
+            width: 1050px;
         }
     }
     .bottom {
