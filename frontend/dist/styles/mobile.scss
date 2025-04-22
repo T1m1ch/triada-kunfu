@@ -421,7 +421,6 @@ body {
             }
 
             & .bottom {
-                height: 150px;
                 padding: 25px;
                 & .content { 
                     & .top-side, .bottom-side {
@@ -430,10 +429,13 @@ body {
                         height: 100px;
                     }
                     & .bottom-side {
-                        height: 175px;
+                        height: unset;
                         border-top: 2px solid white;
                     }
                 }
+            }
+            & .not-found-message-block {
+                height: 80vh !important;
             }
         }
     }
