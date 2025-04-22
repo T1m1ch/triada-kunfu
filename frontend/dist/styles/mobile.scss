@@ -268,10 +268,12 @@ body {
             }
             
             & .master-block {
+                padding-bottom: 0px !important;
                 max-height: 7000px;
                 & .content {
                     position: relative;
                     & .text-content {
+                        padding-bottom: 50px;
                         width: 100%;
                         & span {
                             width: 95%;
@@ -297,6 +299,9 @@ body {
                     & .grandmaster-image {
                         filter: brightness(0.35);
                         position: absolute;
+                        bottom: 0 !important;
+                        right: -80px;
+                        height: 750px !important;
                     }
                 }
             }
