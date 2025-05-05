@@ -329,21 +329,7 @@
                             z-index: 1;
                             position: relative;
                             align-items: center;
-                            & .controls {
-                                display: flex;
-                                align-items: center;
-                                height: 100%;
-                                justify-content: space-between;
-                                position: absolute;
-                                width: 100%;
-                                & button {
-                                    border-radius: 30%;
-                                    &:hover {
-                                        //border: none;
-                                    }
-                                }
-                                z-index: 2;
-                            }
+                          
                             & .image-view {
                                 display: flex;
                                 overflow: hidden;
@@ -491,6 +477,11 @@
                                 }
                                 & .agreement {
                                     display: flex;
+                                    flex-direction: column;
+                                    & div {
+                                        display: flex;
+                                        gap: 10px;
+                                    }
                                     align-items: center;
                                     justify-content: center;
                                     gap: 10px;
