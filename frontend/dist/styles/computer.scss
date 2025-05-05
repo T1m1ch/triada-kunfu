@@ -88,7 +88,6 @@ $page-size: 1366px;
             box-sizing: border-box;
         }
         & .text-side {
-            border: 1px solid black;
             padding: 0 7px;
             & h2 {
                 text-align: center;
@@ -264,9 +263,6 @@ $page-size: 1366px;
                         border-radius: 30%;
                         width: 40px;
                         height: 40px;
-                        &:hover {
-                            background-color: rgb(237, 29, 38);
-                        }
                     }
                 }
             }
@@ -281,13 +277,11 @@ $page-size: 1366px;
                 background-position: 10%;
                 width: 70%;
                 position: relative;
-                height: 700px !important;
-                padding: 0% 20% !important;
+                padding: 0 15% !important;
                 & iframe {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    height: 100% !important;
                     border-radius: 10px;
                     padding: 8% 10px;
                     background-color: rgb(255, 255, 255, 0.98);
@@ -303,7 +297,7 @@ $page-size: 1366px;
             }
         }
         & .faq {
-            width: 1050px;
+            width: 1000px;
         }
     }
     .bottom {
